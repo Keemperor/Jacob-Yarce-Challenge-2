@@ -19,14 +19,14 @@
 
 /* body elements */
 body {
-    color: var(--tertiary-color);
+    color: var(--secondary-color);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 /* header elements */
 header {
     padding: 20px 35px;
-    background-color: var(--tertiary-color);
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -45,19 +45,20 @@ header h1 {
     font-weight: bold;
     font-size: 65px;
     color: var(--primary-color);
+    text-shadow: 2px 2px 0 rgba(233, 235, 234, .5);
     margin: 0;
-    text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    
 }
 
 header a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--tertiary-color);
     padding: 10px 15px;
     margin: 0 5px;
     font-weight: lighter;
     font-size: 1.55vw;
     text-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--tertiary-color);
 }
 
 header nav {
@@ -70,7 +71,7 @@ header nav {
 }
 
 header nav a:hover {
-    background: var(--primary-color);
+    background: var(--btn-hover-color);
     color: var(--tertiary-color);
     text-shadow: none;
 }
@@ -78,47 +79,59 @@ header nav a:hover {
 /* hero elements */
 .hero {
     align-items: flex-start;
-    background-image: url("../images/Jacob\ Yarce\ Resume\ 2020-02.svg");
-    height: 80%;
+    background-image: url("../images//20210916_170640.jpg");
+    height: 600px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    background-position: 80%;
+    background-attachment: scroll;
+    background-position: center;
 }
 
 .hero-text {
-    background-color: var(--tertiary-color, .6);
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--secondary-color, .6);
     padding: 20px 80px 20px 20px;
-    width: 35%;
-    text-align: right;
-    margin: 3.5%;
-    color: var(--secondary-color);
+    width: 100%;
+    text-align: left;
+    color: var(--tertiary-color);
     font-size: 18px;
     line-height: 1.2;
 }
 
 .hero-text h2 {
+    flex: 1;
     font-style: italic;
     font-size: 55px;
     color: var(--primary-color);
-    text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    text-shadow: 2px 2px 0 rgba(233, 235, 234, .5);
+    padding: 5px 10px;
 }
 
-.hero-image {
-    display: flex;
+.hero-side {
     flex: 1;
-    margin: 20px;
-    align-items: center;
-    flex-direction: column;
+    border-right: 5px solid var(--primary-color);
+    padding: 5px 5px;
+    margin: 2%;
+    max-width: 20%;
 }
 
-.hero-image img {
-    max-width: 100%;
-    max-height: 60%;
+.about-me {
+    flex: 1;
+    padding: 5px 5px;
+    margin: 2%;
 }
+
+.abbout-me p {
+    padding: 5px 10px;
+}
+
+
 
 /* Media query for smaller destop screens and smaller devices */
 
@@ -153,11 +166,21 @@ header nav a:hover {
         width: 100%;
     }
     
-    .hero-text, .hero-image {
+    .hero-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me {
         width: 100%;
     }
-    
-    .hero-text {
+    .hero-side {
+        border-right: none;
+        border-bottom: 5px solid var(--primary-color);
+        max-width: 100%;
+    }
+
+    .hero-side h2 {
         text-align: center;
     }
     
