@@ -26,7 +26,7 @@ body {
 section {
     display: block;
 }
-/* header elements */
+/* header elements and about elements */
 header {
     padding: 20px 35px;
     background-color: var(--secondary-color);
@@ -36,7 +36,6 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    /*background-image: url("../images/Jacob\ Yarce\ Resume\ 2020-02.svg");*/
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -78,6 +77,8 @@ header nav a:hover, .hero-text nav a:hover {
     color: var(--tertiary-color);
     text-shadow: none;
 }
+
+/* main elements*/
 
 main {
     display: flex;
@@ -151,6 +152,8 @@ aside {
     padding-bottom: 125%;
 }
 
+
+/* about-me elements*/
 .about-me {
     flex: 1;
     padding: 5px 5px;
@@ -161,7 +164,7 @@ aside {
     padding: 5px 10px;
 }
 
-
+/* portfolio elements*/
 .portfolio {
     display: flex;
     flex-wrap: wrap;
@@ -174,8 +177,8 @@ aside {
     color: var(--tertiary-color);
     font-size: 18px;
     line-height: 1.2;
+    list-style: none;
 }
-
 
 .box {
     display: flex;
@@ -185,17 +188,23 @@ aside {
     background-color: var(--secondary-color);
     border: 5px solid var(--tertiary-color);
     margin: 10px;
-    flex: 0 0 500px;
+    flex: 0 600px;
     align-items: center;
     transition: transform 350ms ease-in-out;
-    
 }
 
 .box img {
     width: 100%;
     max-width: 100%;
-    height: auto;
+    height: 275px;
     transition: transform 350ms ease-in-out;
+    position: top;
+    object-fit: cover;
+}
+
+.fit {
+    order: -1;
+    flex: 1 0 100%;
 }
 
 .box:hover {
@@ -289,18 +298,6 @@ aside {
 
     .hero-side-2 h2 {
         text-align: center;
-    }
-
-    .section-title {
-        width: 80%;
-    }
-    
-    .trainer {
-        flex: 0 70%;
-    }
-    
-    .contact-info iframe {
-        flex: 1 100%;
     }
     
     }
